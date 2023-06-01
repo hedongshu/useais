@@ -14,13 +14,13 @@ const menus = computed((): IMenuItem[] => [
   {
     type: 'link',
     text: t('pages.app.nav'),
-    route: { name: 'getting-started' },
+    route: { name: 'apps' },
   },
-  { type: 'link', text: t('pages.faq.nav'), route: { name: 'blank' } },
+  { type: 'link', text: t('pages.faq.nav'), route: { name: 'faq' } },
   {
     type: 'link',
     text: t('pages.about.nav'),
-    route: { name: 'getting-started' },
+    route: { name: 'about' },
   },
 
   // { type: 'link', text: t('pages.test.nav'), route: { name: 'test' } },

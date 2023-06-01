@@ -81,7 +81,7 @@ const copyBash = () => {
           <div
             class="flex space-x-4 ml-4 mt-10 justify-center md:justify-start"
           >
-            <Button size="lg" text="start" class="font-extrabold" />
+            <Button to="/apps" size="lg" text="start" class="font-extrabold" />
           </div>
         </div>
         <div class="hidden md:flex md:w-2/8 justify-center items-end relative">

@@ -14,8 +14,13 @@ others:
 pages:
   '404':
     title: page not found
+  about:
+    title: about
   app:
     nav: apps
+  apps:
+    description: all apps
+    title: apps
   blank:
     description: this is a blank page
     just_blank_page_with_title: just blank page with title
@@ -28,7 +33,9 @@ pages:
     nav: dashboard
     title: dashboard
   faq:
+    description: faq
     nav: common problem
+    title: faq
   getting-started:
     description: this is a getting started page
     nav: getting started
