@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import { useCounter } from '~/stores/counter'
-import { useIdentity } from '~/stores/identity'
 import { capitalize } from '~/utils/str'
+import Page from '~~/layouts/page.vue'
 
 // composable
 const { t } = useLang()
@@ -19,9 +18,6 @@ useHead(() => ({
     },
   ],
 }))
-
-const counter = useCounter()
-const identity = useIdentity()
 </script>
 
 <template>
@@ -30,15 +26,17 @@ const identity = useIdentity()
       <PageTitle :text="$t('pages.apps.title')" class="capitalize" />
     </PageHeader>
     <PageBody>
-      <div>
-        <ul
+      <PageSection>
+        <div
           class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 noise"
         >
-          <li
-            class="relative col-span-1 flex flex-col justify-between divide-y divide-gray-200 rounded-lg bg-white dark:bg-dark-800 dark:text-light-500 text-center shadow"
+          <Card
+            v-for="item in 8"
+            :key="item"
+            class="relative col-span-1 flex flex-col justify-between divide-y text-center"
           >
-            <a href=""
-              ><div class="flex flex-1 flex-col p-8">
+            <CardContent>
+              <div class="flex flex-1 flex-col p-8">
                 <div
                   class="mx-auto flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-gray-100 text-3xl"
                 >
@@ -56,9 +54,11 @@ const identity = useIdentity()
                   </dd>
                 </dl>
               </div>
-            </a>
-            <div>
-              <div class="-mt-px flex divide-x divide-gray-200">
+            </CardContent>
+            <CardFooter>
+              <div
+                class="-mt-px flex divide-x divide-gray-200 dark:divide-gray-800"
+              >
                 <div class="flex w-0 flex-1">
                   <button
                     class="relative -mr-px inline-flex w-0 flex-1 items-center justify-center gap-x-3 rounded-bl-lg border border-transparent py-4 text-sm font-semibold text-gray-900 dark:text-light-900"
@@ -77,10 +77,10 @@ const identity = useIdentity()
                   </a>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+            </CardFooter>
+          </Card>
+        </div>
+      </PageSection>
     </PageBody>
   </PageWrapper>
 </template>

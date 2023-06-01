@@ -13,6 +13,11 @@ const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
   {
     type: 'link',
+    text: t('pages.index.nav'),
+    route: { name: 'index' },
+  },
+  {
+    type: 'link',
     text: t('pages.app.nav'),
     route: { name: 'apps' },
   },

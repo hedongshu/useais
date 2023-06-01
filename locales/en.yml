@@ -40,7 +40,10 @@ pages:
     description: this is a getting started page
     nav: getting started
     title: getting started
+  home:
+    title: home
   index:
+    nav: home
     title: Use AIS [] Unlock   [] future
   post:
     description: this is a post page

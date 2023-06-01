@@ -9,13 +9,14 @@ const app = useAppConfig() as AppConfigInput
 
 useHead({
   title: app.name,
-  titleTemplate: '%s - Nuxt 3 Awesome Starter',
+  titleTemplate: '%s - Use AIs',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     {
       hid: 'description',
       name: 'description',
-      content: 'Nuxt 3 Awesome Starter',
+      content:
+        '欢迎来到 Use AIS - 我们专注于提供多功能 AI 应用。我们的使命是通过先进的 AI 技术，帮助我们的用户简化生活，提高效率。',
     },
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

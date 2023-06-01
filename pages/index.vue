@@ -2,6 +2,16 @@
 // composable
 const { t } = useLang()
 
+useHead(() => ({
+  title: capitalize(t('pages.home.title')),
+  meta: [
+    {
+      name: 'description',
+      content: t('pages.index.title'),
+    },
+  ],
+}))
+
 // meta
 definePageMeta({
   layout: 'page',
