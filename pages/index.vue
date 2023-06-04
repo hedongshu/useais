@@ -39,21 +39,6 @@ const leadingsText = computed(() => [
     delay: 4,
   },
 ])
-const tooltip = ref(false)
-
-// const
-const cancelTooltip = () => {
-  tooltip.value = false
-  const tt = document.querySelector('.tooltiptext')
-  if (tt) tt.innerHTML = `Copy to clipboard`
-}
-const copyBash = () => {
-  const bash = 'git clone https://github.com/viandwi24/nuxt3-awesome-starter'
-  navigator.clipboard.writeText(bash)
-  tooltip.value = true
-  const tt = document.querySelector('.tooltiptext')
-  if (tt) tt.innerHTML = `Copied!!!`
-}
 </script>
 
 <template>

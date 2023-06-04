@@ -2,7 +2,7 @@
   // https://v3.nuxtjs.org/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
     "types": [
       "nuxt-windicss",

@@ -1,3 +1,6 @@
+auth:
+  login: Login
+  logout: logout
 banners:
   welcome: hello, welcome to %{app_name}!
 components:
@@ -15,6 +18,7 @@ pages:
   '404':
     title: page not found
   about:
+    nav: about
     title: about
   app:
     nav: apps

@@ -1,18 +1,22 @@
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+
+import { auth } from './config'
+
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   // server side rendering mode
   ssr: false,
 
   routeRules: {
-    '/index': { ssr: false },
+    // '/index': { ssr: false },
   },
 
   // typescripts
   typescript: {
-    strict: true,
+    strict: false,
     typeCheck: true,
   },
 
@@ -29,6 +33,7 @@ export default defineNuxtConfig({
 
   // modules
   modules: [
+    '@bg-dev/nuxt-auth',
     'unplugin-icons/nuxt',
     '@intlify/nuxt3',
     '@pinia/nuxt',
@@ -36,6 +41,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-windicss',
   ],
+
+  // @ts-ignore
+  auth,
 
   // experimental features
   experimental: {
@@ -51,6 +59,7 @@ export default defineNuxtConfig({
       UnpluginComponentsVite({
         dts: true,
         resolvers: [
+          NaiveUiResolver(),
           IconsResolver({
             prefix: 'Icon',
           }),
